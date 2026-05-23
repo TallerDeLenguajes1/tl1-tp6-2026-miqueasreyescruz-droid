@@ -1,12 +1,19 @@
-﻿Console.WriteLine("Hello, World!");
+﻿int num = 0, aux = 0;
+string s = "";
 
-int a;
+Console.WriteLine("- Ingrese el numero a invertir: ");
+s = Console.ReadLine();
 
-int b;
-
-a = 10;
-
-b = a;
-
-Console.WriteLine("valor de a:"+a);
-Console.WriteLine("valor de b:"+b);
+if (int.TryParse(s, out num))
+{
+    while (num > 0)
+    {
+        aux = aux * 10 + num % 10;
+        num = num / 10;
+    }
+    Console.WriteLine("- El numero invertido del numero ingresado es: " + aux);
+}
+else
+{
+    Console.WriteLine("- Error: El valor ingresado no es un numero");
+}
