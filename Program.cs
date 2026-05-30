@@ -73,6 +73,7 @@ do
             Console.WriteLine("-> Analizando el numero " + num1 + ":");
             Console.WriteLine("Valor Absoluto: " + valorAbs(num1));
             Console.WriteLine("Cuadrado: " + cuadrado(num1));
+            Console.WriteLine("Razi cuadrada: " + raizCuadrada(num1));
             break;
         default:
             Console.WriteLine("ERROR: valor no esperado");
@@ -105,5 +106,11 @@ double valorAbs (double num)
 double cuadrado (double num)
 {
     num = num * num;
+    return num;
+}
+
+double raizCuadrada (double num)
+{
+    num = Math.Sqrt(num);
     return num;
 }
