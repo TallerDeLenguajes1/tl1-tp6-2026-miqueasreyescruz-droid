@@ -28,6 +28,7 @@ do
         while(!validarNum1)
         {
             Console.WriteLine("-> Ingrese el primer numero: ");
+            aux = Console.ReadLine();
             validarNum1 = float.TryParse(aux, out num1);
             if (!validarNum1) Console.WriteLine("ERROR: valor invalido ingresado");
         }
