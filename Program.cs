@@ -34,11 +34,14 @@ do
         if (!validarNum1) Console.WriteLine("ERROR: valor invalido ingresado");
     }
 
-    while(!validarNum2)
+    if (selector != "5")
     {
-        Console.WriteLine("-> Ingrese el segundo numero: ");
-        validarNum2 = float.TryParse(Console.ReadLine(), out num2);
-        if (!validarNum2) Console.WriteLine("ERROR: valor invalido ingresado");
+        while(!validarNum2)
+        {
+            Console.WriteLine("-> Ingrese el segundo numero: ");
+            validarNum2 = float.TryParse(Console.ReadLine(), out num2);
+            if (!validarNum2) Console.WriteLine("ERROR: valor invalido ingresado");
+        }
     }
 
     switch (selector)
@@ -63,11 +66,12 @@ do
             }
             else
             {
-                Console.Write("ERROR: no se puede divir en 0");
+                Console.WriteLine("ERROR: no se puede divir en 0");
             }
             break;
         case "5":
-
+            Console.WriteLine("Analizando " + num1 + ":");
+            Console.WriteLine("Valor Absoluto:" + valorAbs(num1));
             break;
         default:
             Console.WriteLine("ERROR: valor no esperado");
@@ -90,3 +94,9 @@ do
     }
 
 } while (verificador);
+
+double valorAbs (double num)
+{
+    num = Math.Sqrt((num * num));
+    return num;
+}
