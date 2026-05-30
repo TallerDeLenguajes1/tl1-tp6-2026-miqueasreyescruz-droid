@@ -81,7 +81,7 @@ do
             Console.WriteLine("Valor Absoluto: " + valorAbs(num3));
 
             Console.WriteLine("Cuadrado: " + cuadrado(num3));
-            Console.WriteLine("Razi cuadrada: " + raizCuadrada(num3));
+            Console.WriteLine("Raiz cuadrada: " + raizCuadrada(num3));
             Console.WriteLine("Seno: " + seno(num3));
             Console.WriteLine("Coseno: " + coseno(num3));
             Console.WriteLine("------------------");
