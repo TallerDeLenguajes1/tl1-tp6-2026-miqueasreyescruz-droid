@@ -27,15 +27,15 @@ do
     
     bool validarNum1 = false, validarNum2 = false;
 
-    while(!validarNum1)
-    {
-        Console.WriteLine("-> Ingrese el primer numero: ");
-        validarNum1 = double.TryParse(Console.ReadLine(), out num1);
-        if (!validarNum1) Console.WriteLine("ERROR: valor invalido ingresado");
-    }
-
     if (selector != "5")
     {
+        while(!validarNum1)
+        {
+            Console.WriteLine("-> Ingrese el primer numero: ");
+            validarNum1 = double.TryParse(Console.ReadLine(), out num1);
+            if (!validarNum1) Console.WriteLine("ERROR: valor invalido ingresado");
+        }
+
         while(!validarNum2)
         {
             Console.WriteLine("-> Ingrese el segundo numero: ");
@@ -70,10 +70,13 @@ do
             }
             break;
         case "5":
+            // Falta ingresar el numero
             Console.WriteLine("-> Analizando el numero " + num1 + ":");
             Console.WriteLine("Valor Absoluto: " + valorAbs(num1));
             Console.WriteLine("Cuadrado: " + cuadrado(num1));
             Console.WriteLine("Razi cuadrada: " + raizCuadrada(num1));
+            Console.WriteLine("Seno: " + seno(num1));
+            Console.WriteLine("Coseno: " + coseno(num1));
             break;
         default:
             Console.WriteLine("ERROR: valor no esperado");
@@ -112,5 +115,19 @@ double cuadrado (double num)
 double raizCuadrada (double num)
 {
     num = Math.Sqrt(num);
+    return num;
+}
+
+double seno (double num)
+{
+    double radianes = num * (Math.PI / 180.0);
+    num = Math.Sin(radianes); 
+    return num;
+}
+
+double coseno (double num)
+{
+    double radianes = num * (Math.PI / 180.0);
+    num = Math.Cos(radianes); 
     return num;
 }
