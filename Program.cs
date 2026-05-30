@@ -63,7 +63,7 @@ do
                 }
                 else
                 {
-                    Console.Write("ERROR: no se puede divir en 0");
+                    Console.WriteLine("ERROR: no se puede divir en 0");
                 }
                 break;
             default:
