@@ -1,6 +1,6 @@
 ﻿using System;
 
-float num1 = 0, num2 = 0, result = 0;
+double num1 = 0, num2 = 0, result = 0;
 string selector = "";
 bool verificador = true;
 
@@ -30,7 +30,7 @@ do
     while(!validarNum1)
     {
         Console.WriteLine("-> Ingrese el primer numero: ");
-        validarNum1 = float.TryParse(Console.ReadLine(), out num1);
+        validarNum1 = double.TryParse(Console.ReadLine(), out num1);
         if (!validarNum1) Console.WriteLine("ERROR: valor invalido ingresado");
     }
 
@@ -39,7 +39,7 @@ do
         while(!validarNum2)
         {
             Console.WriteLine("-> Ingrese el segundo numero: ");
-            validarNum2 = float.TryParse(Console.ReadLine(), out num2);
+            validarNum2 = double.TryParse(Console.ReadLine(), out num2);
             if (!validarNum2) Console.WriteLine("ERROR: valor invalido ingresado");
         }
     }
@@ -70,8 +70,9 @@ do
             }
             break;
         case "5":
-            Console.WriteLine("Analizando " + num1 + ":");
-            Console.WriteLine("Valor Absoluto:" + valorAbs(num1));
+            Console.WriteLine("-> Analizando el numero " + num1 + ":");
+            Console.WriteLine("Valor Absoluto: " + valorAbs(num1));
+            Console.WriteLine("Cuadrado: " + cuadrado(num1));
             break;
         default:
             Console.WriteLine("ERROR: valor no esperado");
@@ -98,5 +99,11 @@ do
 double valorAbs (double num)
 {
     num = Math.Sqrt((num * num));
+    return num;
+}
+
+double cuadrado (double num)
+{
+    num = num * num;
     return num;
 }
