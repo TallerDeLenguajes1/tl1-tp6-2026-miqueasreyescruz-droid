@@ -13,63 +13,67 @@ do
     Console.WriteLine("2. RESTA");
     Console.WriteLine("3. MILTIPLICACION");
     Console.WriteLine("4. DIVISION");
+    Console.WriteLine("5. ANALIZAR");
     Console.WriteLine("------------------");
 
-    selector = Console.ReadLine();
-    if (selector != "1" && selector != "2" && selector != "3" && selector != "4")
+    do
     {
-        Console.WriteLine("-> ERROR: opcion no valida, ingrese nuevamente:");
-    }
-    else
+        selector = Console.ReadLine();
+        if (selector != "1" && selector != "2" && selector != "3" && selector != "4" && selector != "5")
+        {
+            Console.WriteLine("-> ERROR: opcion no valida, ingrese nuevamente:");
+        }
+    } while (selector != "1" && selector != "2" && selector != "3" && selector != "4" && selector != "5");
+    
+    bool validarNum1 = false, validarNum2 = false;
+
+    while(!validarNum1)
     {
-        bool validarNum1 = false, validarNum2 = false;
-        string aux = "";
-
-        while(!validarNum1)
-        {
-            Console.WriteLine("-> Ingrese el primer numero: ");
-            validarNum1 = float.TryParse(aux, out num1);
-            if (!validarNum1) Console.WriteLine("ERROR: valor invalido ingresado");
-        }
-
-        while(!validarNum2)
-        {
-            Console.WriteLine("-> Ingrese el segundo numero: ");
-            aux = Console.ReadLine();
-            validarNum2 = float.TryParse(aux, out num2);
-            if (!validarNum2) Console.WriteLine("ERROR: valor invalido ingresado");
-        }
-
-        switch (selector)
-        {
-            case "1":
-                result = num1 + num2;
-                Console.WriteLine(num1 + " + " + num2 + " = " + result);
-                break;
-            case "2":
-                result = num1 - num2;
-                Console.WriteLine(num1 + " - " + num2 + " = " + result);
-                break;
-            case "3":
-                result = num1 * num2;
-                Console.WriteLine(num1 + " * " + num2 + " = " + result);
-                break;
-            case "4":
-                if(num2 != 0)
-                {
-                    result = num1 / num2;
-                    Console.WriteLine(num1 + " + " + num2 + " = " + result);   
-                }
-                else
-                {
-                    Console.Write("ERROR: no se puede divir en 0");
-                }
-                break;
-            default:
-                Console.WriteLine("ERROR: valor no esperado");
-                break;
-        }
+        Console.WriteLine("-> Ingrese el primer numero: ");
+        validarNum1 = float.TryParse(Console.ReadLine(), out num1);
+        if (!validarNum1) Console.WriteLine("ERROR: valor invalido ingresado");
     }
+
+    while(!validarNum2)
+    {
+        Console.WriteLine("-> Ingrese el segundo numero: ");
+        validarNum2 = float.TryParse(Console.ReadLine(), out num2);
+        if (!validarNum2) Console.WriteLine("ERROR: valor invalido ingresado");
+    }
+
+    switch (selector)
+    {
+        case "1":
+            result = num1 + num2;
+            Console.WriteLine(num1 + " + " + num2 + " = " + result);
+            break;
+        case "2":
+            result = num1 - num2;
+            Console.WriteLine(num1 + " - " + num2 + " = " + result);
+            break;
+        case "3":
+            result = num1 * num2;
+            Console.WriteLine(num1 + " * " + num2 + " = " + result);
+            break;
+        case "4":
+            if(num2 != 0)
+            {
+                result = num1 / num2;
+                Console.WriteLine(num1 + " + " + num2 + " = " + result);   
+            }
+            else
+            {
+                Console.Write("ERROR: no se puede divir en 0");
+            }
+            break;
+        case "5":
+
+            break;
+        default:
+            Console.WriteLine("ERROR: valor no esperado");
+            break;
+    }
+    
 
     Console.WriteLine("------------------");
 
@@ -84,4 +88,5 @@ do
         verificador = false;
         Console.WriteLine("Saliendo...");
     }
+
 } while (verificador);
