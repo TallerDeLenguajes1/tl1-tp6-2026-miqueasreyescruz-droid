@@ -1,4 +1,4 @@
-# Trabajo Practico 6 - Taller de Lenguajes I
+# Taller de Lenguajes I - Trabajo Practico 6
 **Nombre y apellido:** Reyes Cruz Miqueas Nicolas | **Fecha de la ultima Actualizacion:** 29/05
 
 ---
