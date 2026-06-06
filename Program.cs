@@ -37,3 +37,13 @@ foreach (char letra in cadena1)
 {
     Console.WriteLine($"{letra}");
 }
+
+Console.WriteLine("La primera cadena ingresada contiene la letra \"a\"?");
+if (cadena1.IndexOf("a") != -1)
+{
+    Console.WriteLine("La cadena, contiene la letra \"a\"");
+}
+else
+{
+    Console.WriteLine("La cadena, no contiene la letra \"a\"");
+}
