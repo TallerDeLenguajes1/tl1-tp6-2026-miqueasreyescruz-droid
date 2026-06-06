@@ -20,7 +20,7 @@
 
 string cadena1, cadena2;
 
-Console.WriteLine("Ingrese una cadena de texto:: ");
+Console.WriteLine("Ingrese una cadena de texto: ");
 cadena1 = Console.ReadLine();
 
 Console.WriteLine($"Longitud de la cadena ingresada: {cadena1.Length}");
@@ -31,3 +31,9 @@ cadena2 = Console.ReadLine();
 Console.WriteLine($"Resultado de la concatenacion de ambas cadenas: {cadena1}{cadena2}");
 
 Console.WriteLine($"Subcadena extraida: {cadena1.Substring(0, (cadena1.Length / 2))}");
+
+Console.WriteLine("Descomposicion de la cadeana 1:");
+foreach (char letra in cadena1)
+{
+    Console.WriteLine($"{letra}");
+}
