@@ -47,3 +47,17 @@ else
 {
     Console.WriteLine("La cadena, no contiene la letra \"a\"");
 }
+
+Console.WriteLine("Convirtiendo cadena en solo MAYUSC:");
+cadena1 = cadena1.ToUpper();
+Console.WriteLine(cadena1);
+Console.WriteLine("Convirtiendo cadena en solo MINUSC:");
+cadena1 = cadena1.ToLower();
+Console.WriteLine(cadena1);
+
+Console.WriteLine("Separando palabras de la cadena ingresada: ");
+string[] palabras = cadena1.Split(" "); 
+foreach (string palabra in palabras)
+{
+    Console.WriteLine($"-{palabra}");
+}
